@@ -1,0 +1,23 @@
+{
+    "name": "Dog Pictures",
+    "version": "1.0",
+    "description": "Pops up a webpage with a reminder 1 minute before the scheduled event",
+    "manifest_version": 3,
+    "icons": {
+        "16": "/img/alert-16.png",
+        "48": "/img/alert-48.png",
+        "128": "/img/alert-128.png"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "all_frames": true,
+        "js":      ["contentScript.js"]
+    }],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
+    "permissions": [
+        "https://dog.ceo/*"
+    ]
+}
