@@ -14,10 +14,13 @@
         "js":      ["contentScript.js"]
     }],
     "background": {
-        "scripts": ["background.js"],
-        "persistent": false
+        "service_worker": "background.js"
       },
-    "permissions": [
+    "host_permissions": [
         "https://dog.ceo/*"
-    ]
+    ],
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Dogs"
+    }
 }
